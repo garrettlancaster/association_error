@@ -1,0 +1,21 @@
+{{outlet}}
+{{#each user in model}}
+  <h2>{{user.name}}</h2>
+  parent: {{user.parent.name}} <br>
+  children: <ul>
+    {{#each child in user.children}}
+      <li>{{child.name}}</li>
+    {{else}}
+      <li><i>none</i></li>
+    {{/each}}
+  </ul>
+  goals: <ul>
+    {{#each goal in user.goals}}
+      <li>{{goal.title}}</li>
+    {{else}}
+      <li><i>none</i></li>
+    {{/each}}
+  </ul>
+  <br>
+  =====================<br>
+{{/each}}

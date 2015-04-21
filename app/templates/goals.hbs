@@ -1,0 +1,9 @@
+{{outlet}}
+<ul>
+{{#each goal in model}}
+  <li>
+    (manager: {{goal.parent.user.name}})
+    <b>{{goal.title}}</b> <small>by {{goal.user.name}}</small>
+  </li>
+{{/each}}
+</ul>
